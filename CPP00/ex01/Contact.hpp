@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:16:03 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/07 13:16:20 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/09/03 13:20:17 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ class Contact
     	std::string darkestSecret;
 
 	public:
-		//Contact() {}
-		//~Contact() {}
 
 		void setFirstName(const std::string& firstname);
 		void setLastName(const std::string& lastName);

@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 14:21:05 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/27 14:21:10 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/09/16 16:29:20 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 
 #include <iostream>
 #include <string>
-#include <sstream>
 
 class Zombie
 {
 	private:
 		std::string name;
 	public:
-		Zombie();
-		//Zombie(std::string name);
+		Zombie(); //default constructor
+		
 		~Zombie();
-		void setName(std::string name);
+		void setName(std::string name); //new method to set the name
 		void announce() const;
 };
 

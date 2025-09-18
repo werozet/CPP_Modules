@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:40:26 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/07 13:40:41 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/09/03 14:41:07 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,6 @@ void Account::_displayTimestamp(void)
               << std::setw(2) << std::setfill('0') << ltm->tm_sec << "] ";
 }
 
-/*
-struct tm {
-    int tm_sec;   Sekundy (0-60, gdzie 60 oznacza sekundę przestępną)
-    int tm_min;   Minuty (0-59)
-    int tm_hour;  Godziny (0-23)
-    int tm_mday;  Dzień miesiąca (1-31)
-    int tm_mon;   Miesiąc (0-11, gdzie 0 = styczeń, 11 = grudzień)
-    int tm_year;  Rok od 1900 (np. 125 oznacza rok 2025)
-    int tm_wday;  Dzień tygodnia (0-6, gdzie 0 = niedziela)
-    int tm_yday;  Dzień roku (0-365, gdzie 0 = 1 stycznia)
-    int tm_isdst; Flaga czasu letniego (>0 oznacza czas letni, 0 oznacza brak, <0 brak informacji)
-};
-*/
 
 Account::Account(int initial_deposit)
     : _accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0) //lista inicjalizacyjna

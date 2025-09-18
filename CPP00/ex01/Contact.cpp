@@ -6,13 +6,12 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:14:52 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/07 13:15:39 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/09/03 13:31:09 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-//Contact::Contact() {}
 
 void Contact::setFirstName(const std::string& firstName)
 {

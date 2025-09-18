@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:14:05 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/07 13:19:46 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/09/03 13:04:06 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 
 #include <iostream>
 #include <string>
-#include <iomanip> //for std::setw
+#include <iomanip> 
 #include "Contact.hpp"
 
 class PhoneBook
 {
 	public:
-		//PhoneBook() {}
-		//~PhoneBook() {}
 	    void addContact();
 	    void searchContact();
 	private:
