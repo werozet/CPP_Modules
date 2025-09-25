@@ -6,11 +6,11 @@
 #    By: wzielins <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 14:34:07 by wzielins          #+#    #+#              #
-#    Updated: 2025/08/27 14:34:20 by wzielins         ###   ########.fr        #
+#    Updated: 2025/09/25 18:18:08 by wzielins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-AME = Harl
+NAME = Harl
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
