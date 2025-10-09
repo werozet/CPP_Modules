@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 14:10:55 by wzielins          #+#    #+#             */
-/*   Updated: 2025/10/02 12:27:53 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:34:03 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ class Fixed
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
-
+//Operator << musi być POZA klasą (globalny) żeby działać z std::cout
 #endif

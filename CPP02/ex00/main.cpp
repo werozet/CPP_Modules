@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 14:09:22 by wzielins          #+#    #+#             */
-/*   Updated: 2025/10/02 12:27:46 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:03:27 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int main( void ) {
 
-Fixed a;
-Fixed b( a ); //wywołanie konstruktora kopiujacego
-Fixed c;
+Fixed a;	 	//call default constructor
+Fixed b( a );	//call copy constructor
+Fixed c;	 	//call default constructor
 
-c = b;
+c = b;		//call copy assignment operator
 
 std::cout << a.getRawBits() << std::endl;
 std::cout << b.getRawBits() << std::endl;

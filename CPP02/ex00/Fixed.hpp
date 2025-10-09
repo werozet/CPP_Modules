@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 14:07:50 by wzielins          #+#    #+#             */
-/*   Updated: 2025/10/02 12:27:43 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:43:25 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,6 @@ class Fixed
 };
 
 #endif
-
-// :: operator zakresu
-
-/*static oznacza że pole bitów ułamkowych należy do całej klasy a nie do konkretnego obiektu*/
 
 /*konstruktor kopiujący
 	ClassName(const ClassName &sourceObj)
