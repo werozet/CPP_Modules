@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 14:28:21 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/28 14:28:23 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:27:16 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,3 @@ int main()
     Guardian1.guardGate();
     return 0;
 }
-/*
-int main()
-{
-    ClapTrap bot1("Bot1");
-    ClapTrap bot2("Bot2");
-
-    for (int i = 0; i < 3; i++)
-    {
-        bot1.attack("Bot2");
-        bot2.takeDamage(5);
-        bot2.beRepaired(1);
-    }
-    return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 14:23:08 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/28 14:23:17 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:12:16 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ class ClapTrap
         int _attackDamage;
 
     public:
-        ClapTrap();
-        ClapTrap(const std::string& name);
-        ClapTrap(const ClapTrap& sourceObj);
-        ClapTrap& operator=(const ClapTrap& sourceObj);
-        ~ClapTrap();
+        ClapTrap();                                  // Default constructor
+        ClapTrap(const std::string& name);         // Parameterized constructor
+        ClapTrap(const ClapTrap& sourceObj);      // Copy constructor
+        ClapTrap& operator=(const ClapTrap& sourceObj); // assignment operator
+        ~ClapTrap();                            // Destructor
 
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
