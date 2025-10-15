@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 18:49:04 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/28 18:49:13 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:09:51 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
 {
 const Animal* j = new Dog();
 const Animal* i = new Cat();
-delete j;//should not create a leak
+delete j;//should not create a leak, virtual destructor
 delete i;
 std::cout <<"MY TEST!!!"<<std::endl;
 const int   numberOfAnimals = 4;

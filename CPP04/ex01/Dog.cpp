@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 18:44:40 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/28 18:44:50 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:08:50 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Dog& Dog::operator=(const Dog& sourceObj)
         Animal::operator=(sourceObj);
         type = sourceObj.type;
 		if (brain)
-        	delete brain;
+        	delete brain;                       //delete existing brain
         brain = new Brain(*sourceObj.brain); // deep copy
     }
     std::cout << "Dog has been assigned!" << std::endl;

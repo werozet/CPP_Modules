@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 18:51:26 by wzielins          #+#    #+#             */
-/*   Updated: 2025/08/28 18:51:45 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:17:22 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AAnimal
         virtual ~AAnimal();
 
         std::string getType() const;
-        virtual void makeSound() const = 0;;
+        virtual void makeSound() const = 0;;    // <- PURE VIRTUAL FUNCTION
 };
 
 #endif
