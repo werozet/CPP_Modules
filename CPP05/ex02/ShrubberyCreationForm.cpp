@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 16:24:46 by wzielins          #+#    #+#             */
-/*   Updated: 2025/11/13 16:24:47 by wzielins         ###   ########.fr       */
+/*   Updated: 2025/11/13 17:37:02 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,18 +45,16 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 		throw AForm::GradeTooLowException();
 	std::ofstream file((target + "_shrubbery").c_str());
 	if (file) {
-    file << "      ccee88oo\n";
-    file << "   C8O8O8Q8PoOb o8oo\n";
-    file << "  dOB69QO8PdUOpugoO9bD\n";
-    file << " CgggbU8OU qOp qOdoUOdcb\n";
-    file << "    6OuU  /p u gcoUodpP\n";
-    file << "      \\\\//  /douUP\n";
-    file << "        \\\\////\n";
-    file << "         |||/\\\n";
-    file << "         |||\\/\n";
-    file << "         |||||\n";
-    file << "   .....//||||\\....\n";
-    file.close();
+		file << "           *\n";
+		file << "          ***\n";
+		file << "         *****\n";
+		file << "        *******\n";
+		file << "       *********\n";
+		file << "      ***********\n";
+		file << "     *************\n";
+		file << "          |||\n";
+		file << "          |||\n";
+		file.close();
 	}
 	std::cout << "Shrubbery has been created in " << target << "_shrubbery" << std::endl;
 }
