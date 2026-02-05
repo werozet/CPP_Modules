@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:46:47 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/05 18:05:32 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 18:10:23 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,9 @@ int main()
 	std::cout << std::endl;
 	
 	Intern someRandomIntern;
-	AForm* form1 = someRandomIntern.makeForm("robotomy request", "Bender");
-	AForm* form2 = someRandomIntern.makeForm("shrubbery creation", "Home");
-	AForm* form3 = someRandomIntern.makeForm("presidential pardon", "Alien");
+	AForm* form1 = someRandomIntern.makeForm("robotomy request form", "Bender");
+	AForm* form2 = someRandomIntern.makeForm("shrubbery creation form", "Home");
+	AForm* form3 = someRandomIntern.makeForm("presidential pardon form", "Alien");
 	AForm* form4 = someRandomIntern.makeForm("nonexisting form", "Nobody");
 
 	delete form1;

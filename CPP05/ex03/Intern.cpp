@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:29:37 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/05 17:42:07 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 18:09:27 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ static AForm* createPresidential(const std::string& target) {
 
 AForm* Intern::makeForm(const std::string& formName, const std::string& target) {
     struct { const char* name; FormCreator creator; } forms[] = {
-        {"shrubbery creation", createShrubbery},
-        {"robotomy request", createRobotomy},
-        {"presidential pardon", createPresidential}
+        {"shrubbery creation form", createShrubbery},
+        {"robotomy request form", createRobotomy},
+        {"presidential pardon form", createPresidential}
     };
     for (size_t i = 0; i < 3; ++i) {
         if (formName == forms[i].name) {
