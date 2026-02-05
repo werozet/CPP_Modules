@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:51:14 by wzielins          #+#    #+#             */
-/*   Updated: 2026/01/28 13:34:37 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 15:40:40 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other) {
 	if (this != &other) {
-		
+		// name jest const, więc nie kopiujemy
 		grade = other.grade;
 	}
 	return *this;

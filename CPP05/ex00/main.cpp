@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:53:54 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/04 16:13:39 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 15:44:09 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main()
 	try {
 		Bureaucrat tooHigh("TooHigh", 0);
 		std::cout << tooHigh << std::endl;
-	} catch (const std::exception &e) {
+	} catch (const std::exception &e) { // łapie wszystkie wyjątki std::exception
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
 
