@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:46:47 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/05 17:42:01 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 18:05:32 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int main()
 	AForm* form1 = someRandomIntern.makeForm("robotomy request", "Bender");
 	AForm* form2 = someRandomIntern.makeForm("shrubbery creation", "Home");
 	AForm* form3 = someRandomIntern.makeForm("presidential pardon", "Alien");
-	AForm* form4 = someRandomIntern.makeForm("nonexistent form", "Nobody");
+	AForm* form4 = someRandomIntern.makeForm("nonexisting form", "Nobody");
 
 	delete form1;
 	delete form2;
