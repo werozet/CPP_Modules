@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:28:30 by wzielins          #+#    #+#             */
-/*   Updated: 2026/01/28 12:28:41 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 17:42:22 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat) {
 
 void Bureaucrat::executeForm(const AForm &form) const {
 	try {
-		form.execute(*this);
+		form.execute(*this); // <-- TU! wywołanie na AForm&, ale wykonuje się konkretna klasa
 		std::cout << name << " executed " << form.getName() << std::endl;
 	} catch (const std::exception &e) {
 		std::cout << name << " couldn’t execute " << form.getName()
