@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 13:28:10 by wzielins          #+#    #+#             */
-/*   Updated: 2025/11/13 13:36:41 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/05 17:08:06 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,21 @@ int main()
 	
 	ShrubberyCreationForm shrubberyForm("Home");
 	RobotomyRequestForm robotomyForm("Robot");
-	PresidentialPardonForm pardonForm("Alice");
+	PresidentialPardonForm pardonForm("Alien");
 	Bureaucrat b1("Tom", 1);
 	Bureaucrat b2("John", 150);
+	Bureaucrat b3("Rick", 30);
 	
 	try {
 		b1.signForm(shrubberyForm);
 		b1.signForm(robotomyForm);
 		b1.signForm(pardonForm);
+	} catch (const std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
+
+	try {
+		b3.signForm(shrubberyForm);
 	} catch (const std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
