@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 13:59:25 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/10 13:59:34 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:31:52 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 #include <string>
 #include <iostream>
-#include <cstdlib> // for strtol...
-#include <cmath> //for nan...
+#include <cstdlib> 
+#include <cmath> 
 #include <limits>
-#include <iomanip> // for fixed...
+#include <iomanip> 
 
 class ScalarConverter
 {

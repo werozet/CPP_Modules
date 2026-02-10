@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: wzielins <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/02/10 13:55:33 by wzielins          #+#    #+#              #
-#    Updated: 2026/02/10 14:31:22 by wzielins         ###   ########.fr        #
+#    Created: 2026/02/10 14:35:20 by wzielins          #+#    #+#              #
+#    Updated: 2026/02/10 14:35:22 by wzielins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = serializer
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp ScalarConverter.cpp
+SRC = main.cpp Serializer.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
