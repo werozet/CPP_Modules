@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 13:27:54 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/05 16:50:15 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:16:51 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,4 @@ public:
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
 
-#endif // BUREAUCRAT_HPP
+#endif

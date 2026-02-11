@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:30:17 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/05 17:42:05 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:30:46 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ public:
 	Intern& operator=(const Intern&);
 	~Intern();
 
-	// Function to create a form based on the form name and target
+	// Function/method to create a form based on the form name and target
 	AForm* makeForm(const std::string& formName, const std::string& target);
 };
