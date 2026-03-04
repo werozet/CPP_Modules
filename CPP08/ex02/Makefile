@@ -6,11 +6,11 @@
 #    By: wzielins <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/17 12:58:32 by wzielins          #+#    #+#              #
-#    Updated: 2026/02/17 12:58:35 by wzielins         ###   ########.fr        #
+#    Updated: 2026/03/04 13:59:54 by wzielins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-AME = ex02
+NAME = ex02
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

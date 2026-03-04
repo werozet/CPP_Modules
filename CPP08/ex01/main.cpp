@@ -6,14 +6,15 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 17:17:55 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/17 12:53:54 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/03/04 13:19:28 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <iostream>
+#include <vector>
 
-/*int main()
+int main()
 	{
 	Span sp = Span(5);
 	sp.addNumber(6);
@@ -23,37 +24,23 @@
 	sp.addNumber(11);
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
-	return 0;
-}*/
-int main()
-{
-	Span sp = Span(5);
-    try {
-        sp.addNumber(42);
-    } catch (const std::exception& e) {
-        std::cout << "Exception (full): " << e.what() << std::endl;
-    }
 
-    // Test wyjątku przy zbyt małej liczbie elementów
-    try {
-        Span sp2(2);
-        sp2.addNumber(1);
-        std::cout << sp2.shortestSpan() << std::endl;
-    } catch (const std::exception& e) {
-        std::cout << "Exception (not enough numbers): " << e.what() << std::endl;
-    }
-
-    // Test masowego dodawania przez iteratory
-	try {
-		Span sp3(5);
-		std::vector<int> vec;
+	try
+	{
+		Span bigSpan(10000);
+		std::vector<int> values;
 		for (int i = 0; i < 10000; ++i)
-			vec.push_back(i * 2);
-		sp3.addNumbers(vec.begin(), vec.end());
-		std::cout << "sp3 shortestSpan: " << sp3.shortestSpan() << std::endl; // powinno być 2
-		std::cout << "sp3 longestSpan: " << sp3.longestSpan() << std::endl;   // powinno być 19998
-	} catch (const std::exception& e) {
-		std::cout << "Exception (too many numbers): " << e.what() << std::endl;
+		{
+			values.push_back(i * 2);
+		}
+		bigSpan.addNumbers(values.begin(), values.end());
+		std::cout << "10000 shortestSpan: " << bigSpan.shortestSpan() << std::endl;
+		std::cout << "10000 longestSpan: " << bigSpan.longestSpan() << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
+	return 0;
 }

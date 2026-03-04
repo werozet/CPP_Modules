@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 17:15:42 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/16 17:16:38 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/03/04 13:27:19 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,6 @@ void Span::addNumber(int number)
 		throw SpanFullException();
 	}
 	_numbers.push_back(number);
-}
-
-void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
-{
-	size_t distanceSize = std::distance(begin, end);
-	if (_numbers.size() + distanceSize > _maxSize)
-	{
-		throw SpanFullException();
-	}
-	_numbers.insert(_numbers.end(), begin, end);
 }
 
 int Span::shortestSpan() const

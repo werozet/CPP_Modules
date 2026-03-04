@@ -6,12 +6,13 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 17:17:00 by wzielins          #+#    #+#             */
-/*   Updated: 2026/02/16 17:17:33 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/03/04 13:27:23 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <vector> // for container, size
+#include <iterator>
 #include <exception>
 #include <algorithm> //for sort, min_element, max_element
 #include <iostream>
@@ -30,7 +31,8 @@ class Span
 		~Span();
 
 		void addNumber(int number);
-		void addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+		template <typename InputIt>
+		void addNumbers(InputIt begin, InputIt end);
 		int shortestSpan() const;
 		int longestSpan() const;
 		
@@ -45,3 +47,16 @@ class Span
     	};
 
 };
+
+template <typename InputIt>
+void Span::addNumbers(InputIt begin, InputIt end)
+{
+	for (InputIt it = begin; it != end; ++it)
+	{
+		if (_numbers.size() >= _maxSize)
+		{
+			throw SpanFullException();
+		}
+		_numbers.push_back(*it);
+	}
+}
