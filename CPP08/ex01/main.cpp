@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
@@ -22,6 +22,7 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
+	std::cout << "Test 1 - single addition" << std::endl; //Single addition
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
 
@@ -34,6 +35,7 @@ int main()
 			values.push_back(i * 2);
 		}
 		bigSpan.addNumbers(values.begin(), values.end());
+		std::cout << "Test 2 - multiple additions" << std::endl; //Multiple additions
 		std::cout << "10000 shortestSpan: " << bigSpan.shortestSpan() << std::endl;
 		std::cout << "10000 longestSpan: " << bigSpan.longestSpan() << std::endl;
 	}
