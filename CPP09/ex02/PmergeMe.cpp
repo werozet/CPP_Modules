@@ -6,7 +6,7 @@
 /*   By: wzielins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 15:22:00 by wzielins          #+#    #+#             */
-/*   Updated: 2026/03/04 15:22:14 by wzielins         ###   ########.fr       */
+/*   Updated: 2026/05/29 17:27:02 by wzielins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,34 +117,47 @@ std::vector<size_t> PmergeMe::jacobsthalIndices(size_t n) const
     if (n == 0)
         return order;
 
+    // Generate Jacobsthal numbers: J(0)=0, J(1)=1, J(2)=3, J(3)=5, J(4)=11...
+    // Formula: J(n) = J(n-1) + 2*J(n-2)
+    std::vector<size_t> jacobsthal;
+    jacobsthal.push_back(0);
+    jacobsthal.push_back(1);
+
+    while (true)
+    {
+        size_t next = jacobsthal.back() + 2 * jacobsthal[jacobsthal.size() - 2];
+        if (next > n)
+            break;
+        jacobsthal.push_back(next);
+    }
+
+    // Insert pending[0] first (smallest element from first pair)
     order.push_back(0);
     if (n == 1)
         return order;
 
-    std::vector<size_t> jac;
-    jac.push_back(1);
-    jac.push_back(3);
-
-    while (jac.back() + 2 * jac[jac.size() - 2] < n)
-        jac.push_back(jac.back() + 2 * jac[jac.size() - 2]);
-
-    size_t processed = 1;
-    for (size_t i = 0; i < jac.size(); ++i)
+    // For each Jacobsthal interval, insert elements in descending order
+    // This ensures optimal number of comparisons with binary search
+    size_t prev = 1;
+    for (size_t i = 2; i < jacobsthal.size(); ++i)
     {
-        size_t end = jac[i];
-        if (end > n)
-            end = n;
+        size_t current = jacobsthal[i];
+        if (current > n)
+            current = n;
 
-        for (size_t idx = end; idx > processed; --idx)
-            order.push_back(idx - 1);
-
-        processed = end;
+        // Insert elements from (prev+1) to current in descending order
+        for (size_t idx = current; idx > prev; --idx)
+        {
+            if (idx - 1 < n)
+                order.push_back(idx - 1);
+        }
+        prev = current;
     }
 
-    if (processed < n)
+    // Insert any remaining elements not covered by Jacobsthal intervals
+    for (size_t idx = n; idx > prev; --idx)
     {
-        for (size_t idx = n; idx > processed; --idx)
-            order.push_back(idx - 1);
+        order.push_back(idx - 1);
     }
 
     return order;
